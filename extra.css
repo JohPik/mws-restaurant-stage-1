@@ -1,0 +1,8 @@
+#restaurants-list {
+    justify-content: flex-start;
+    }
+
+
+    #restaurants-list li {
+    margin: auto;
+    }
