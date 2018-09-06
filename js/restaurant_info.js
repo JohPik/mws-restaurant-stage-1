@@ -150,13 +150,27 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   li.className = "col-3";
 
+
+  const myDiv = document.createElement('div');
+  li.appendChild(myDiv);
+  myDiv.classList.add("myDiv")
+
   const name = document.createElement('p');
   name.innerHTML = review.name;
-  li.appendChild(name);
+  myDiv.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
-  li.appendChild(date);
+  myDiv.appendChild(date);
+
+
+  // const name = document.createElement('p');
+  // name.innerHTML = review.name;
+  // li.appendChild(name);
+  //
+  // const date = document.createElement('p');
+  // date.innerHTML = review.date;
+  // li.appendChild(date);
 
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
