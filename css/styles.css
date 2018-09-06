@@ -4,6 +4,7 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body,td,th,p{
@@ -282,6 +283,7 @@ nav h1 a {
   padding: 0 20px 20px;
   position: relative;
   width: 85%;
+  border-radius: 40px 0px;
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -290,11 +292,7 @@ nav h1 a {
   color: #666;
 }
 
-
-/* query media*/
-
-
-
+/* ====================== Johan Styling Home Page ====================== */
 #restaurants-list {
   margin: auto;
   list-style: none;
@@ -314,50 +312,130 @@ nav h1 a {
   width: 30%;
   padding: 1em 0;
 	padding-top: 0;
+  border-radius: 40px 0px;
 }
 
-/* #restaurants-list li:last-child {
-    margin: 0.5em;
-} */
+.leaflet-bottom.leaflet-right {
+    display: none;
+}
 
-@media only screen and (max-width: 1000px) {
-  /* #restaurants-list {
-    width: 90%;
-  } */
- }
+/* ====================== Johan Styling restaurant page ====================== */
 
+.inside img {
+    border-radius: 40px 0px;
+}
+
+.inside #footer {
+  bottom: 0;
+  position: absolute;
+  width: calc(100% - 50px);
+}
+
+.inside #map-container {
+    height: 100%;
+}
+
+/* =================== need to fix those ======================*/
+
+          /*
+          .myDiv {
+              background: #333;
+          }
+
+          .myDiv p {
+              color: white;
+              display: inline-block;
+              font-weight: bold;
+              font-size: 1.2em;
+          }
+
+          .col-3 p {
+              padding: 10px 30px;
+          } */
+
+@media only screen and (max-width: 900px) {
+  #reviews-list li{
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .inside #footer {
+    position: static;
+  }
+
+  .inside header {
+    position: sticky;
+  }
+
+	#breadcrumb {
+		width: calc(100% - 10px);
+    height: 30px;
+    padding: 10px 0;
+    padding-left: 10px;
+	}
+
+
+  .inside #map-container {
+    position: static;
+    /* height: 150px; */
+    height: 20em;
+    left: 0;
+    top: 130px;
+    width: 100%;
+  }
+
+
+  nav {
+    height: auto;
+  }
+
+  nav h1 a {
+    font-size: 10pt;
+  }
+
+  .inside .leaflet-top, .inside .leaflet-bottom {
+    position: static;
+  }
+
+  #restaurant-container, #reviews-container {
+    padding: 0;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #restaurant-container *, #reviews-container * {
+    margin: auto;
+  }
+}
+
+
+/* ======================  Query Media ====================== */
 
 @media only screen and (max-width: 750px) {
 	#map {
 		height: 300px;
 	}
-  /* #restaurants-list {
-    width: 95%;
-  } */
+
   #restaurants-list li {
     width: 46%;
     }
-  /* #restaurants-list li:last-child {
-    margin: 0.5em auto;
-  } */
+
 }
 
 @media only screen and (max-width: 550px) {
 	#map {
     height: 200px;
 	}
-  /* #restaurants-list {
-    width: 95%;
-  } */
+
   #restaurants-list li {
     width: 90%;
     }
-  /* #restaurants-list li:last-child {
-    margin: 0.5em auto;
-  } */
+
 }
 
 #restaurants-list li img {
   width: 100%;
 	height: auto;
+  border-radius: 40px 0px;
+  border-bottom-right-radius: 0px;
 }
