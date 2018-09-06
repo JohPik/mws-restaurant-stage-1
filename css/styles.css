@@ -312,7 +312,7 @@ nav h1 a {
   width: 30%;
   padding: 1em 0;
 	padding-top: 0;
-  border-radius: 40px 0px;
+  border-radius: 25px 0px;
 }
 
 .leaflet-bottom.leaflet-right {
@@ -322,7 +322,7 @@ nav h1 a {
 /* ====================== Johan Styling restaurant page ====================== */
 
 .inside img {
-    border-radius: 40px 0px;
+    border-radius: 25px 0px;
 }
 
 .inside #footer {
@@ -337,22 +337,24 @@ nav h1 a {
 
 /* =================== need to fix those ======================*/
 
-          /*
-          .myDiv {
+
+          .reviewHeader {
               background: #333;
           }
 
-          .myDiv p {
+          .reviewHeader p {
               color: white;
               display: inline-block;
               font-weight: bold;
               font-size: 1.2em;
           }
 
-          .col-3 p {
+          /* .col-3 p {
               padding: 10px 30px;
           } */
-
+p.comments {
+    text-align: justify;
+}
 @media only screen and (max-width: 900px) {
   #reviews-list li{
     margin: 20px auto;
@@ -406,6 +408,16 @@ nav h1 a {
   #restaurant-container *, #reviews-container * {
     margin: auto;
   }
+
+  #restaurant-name, #restaurant-address, #restaurant-cuisine, #restaurant-hours, #reviews-container h2 {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .inside .restaurant-img {
+      margin: 10px auto;
+      display: block;
+    }
 }
 
 
@@ -436,6 +448,6 @@ nav h1 a {
 #restaurants-list li img {
   width: 100%;
 	height: auto;
-  border-radius: 40px 0px;
+  border-radius: 23px 0px;
   border-bottom-right-radius: 0px;
 }

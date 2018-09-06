@@ -13,3 +13,15 @@
 .col-3 p {
     padding: 10px 30px;
 }
+
+
+/*under 900px*/
+.restaurant-img {
+    margin: 10px auto;
+    display: block;
+  }
+
+  h1 {
+    margin: 10px auto;
+    font-size: 16pt;
+  }

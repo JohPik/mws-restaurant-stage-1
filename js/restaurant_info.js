@@ -151,17 +151,17 @@ createReviewHTML = (review) => {
   li.className = "col-3";
 
 
-  const myDiv = document.createElement('div');
-  li.appendChild(myDiv);
-  myDiv.classList.add("myDiv")
+  const reviewHeader = document.createElement('div');
+  li.appendChild(reviewHeader);
+  reviewHeader.classList.add("reviewHeader")
 
   const name = document.createElement('p');
   name.innerHTML = review.name;
-  myDiv.appendChild(name);
+  reviewHeader.appendChild(name);
 
   const date = document.createElement('p');
   date.innerHTML = review.date;
-  myDiv.appendChild(date);
+  reviewHeader.appendChild(date);
 
 
   // const name = document.createElement('p');
@@ -179,6 +179,7 @@ createReviewHTML = (review) => {
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
   li.appendChild(comments);
+  comments.classList.add("comments")
 
   return li;
 }
