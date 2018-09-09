@@ -83,9 +83,6 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
-  // const restaurantMainSection = document.querySelector("#restaurant-container");
-  // var headingAttribute = `${restaurant.name}, ${restaurant.neighborhood}`;
-  // restaurantMainSection.setAttribute("aria-label", headingAttribute);
 
   const address = document.getElementById('restaurant-address');
   var addressAttribute = `Address, ${restaurant.address}`;
