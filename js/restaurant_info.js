@@ -83,7 +83,13 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
+  // const restaurantMainSection = document.querySelector("#restaurant-container");
+  // var headingAttribute = `${restaurant.name}, ${restaurant.neighborhood}`;
+  // restaurantMainSection.setAttribute("aria-label", headingAttribute);
+
   const address = document.getElementById('restaurant-address');
+  var addressAttribute = `Address, ${restaurant.address}`;
+  address.setAttribute("aria-label", addressAttribute);
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
@@ -91,6 +97,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
+  var cuisineAttribute = `Cuisine type, ${restaurant.cuisine_type}`;
+  cuisine.setAttribute("aria-label", cuisineAttribute);
   cuisine.innerHTML = restaurant.cuisine_type;
 
   // fill operating hours
@@ -108,6 +116,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
+    row.setAttribute("tabindex", "0");
 
     const day = document.createElement('td');
     day.innerHTML = key;
@@ -130,6 +139,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.setAttribute("tabindex", "0");
+  title.setAttribute("role", "heading");
   container.appendChild(title);
 
   if (!reviews) {
@@ -151,6 +162,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   li.className = "col-3";
+  li.setAttribute("tabindex", "0");
 
 
   const reviewHeader = document.createElement('div');
